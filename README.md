@@ -106,22 +106,31 @@ Ease_English/
 
 ### 2. Environment Configuration
 
+Copy the provided `.env.example` templates in each service directory to create your local `.env` files.
+**Note:** Real `.env` files are excluded from version control and will never be published to GitHub.
+
 #### Backend (`backend/.env`):
+```bash
+cp backend/.env.example backend/.env
+```
 ```env
 PORT=5000
 MONGODB_URI=mongodb://localhost:27017/ease_english
-JWT_SECRET=ease_english_secure_jwt_secret_key_2026
-GOOGLE_CLIENT_ID=1083809691452-uncr1hsesdq94s7sns2mds87co1amuhp.apps.googleusercontent.com
+JWT_SECRET=your_super_strong_jwt_secret_min_32_characters
+GOOGLE_CLIENT_ID=your_google_client_id.apps.googleusercontent.com
 PYTHON_AI_SERVICE_URL=http://localhost:8000
 CLIENT_URL=http://localhost:5173
 NODE_ENV=development
 ```
 
 #### AI Service (`ai-service/.env`):
+```bash
+cp ai-service/.env.example ai-service/.env
+```
 ```env
 PORT=8000
 AI_PROVIDER=gemini
-GEMINI_API_KEY=
+GEMINI_API_KEY=your_gemini_api_key_here
 GEMINI_LLM_MODEL=gemini-2.5-flash
 GEMINI_STT_MODEL=gemini-2.5-flash
 GEMINI_TTS_MODEL=gemini-2.5-flash
@@ -130,8 +139,11 @@ ENVIRONMENT=development
 ```
 
 #### Frontend (`frontend/.env`):
+```bash
+cp frontend/.env.example frontend/.env
+```
 ```env
-VITE_GOOGLE_CLIENT_ID=1083809691452-uncr1hsesdq94s7sns2mds87co1amuhp.apps.googleusercontent.com
+VITE_GOOGLE_CLIENT_ID=your_google_client_id.apps.googleusercontent.com
 VITE_API_URL=http://localhost:5000/api
 ```
 
