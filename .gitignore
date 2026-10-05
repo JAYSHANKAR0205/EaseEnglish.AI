@@ -1,0 +1,75 @@
+# ==========================================
+# Dependencies & Virtual Environments
+# ==========================================
+node_modules/
+**/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+venv/
+.venv/
+env/
+**/venv/
+**/.venv/
+**/env/
+*.egg-info/
+dist/
+build/
+
+# ==========================================
+# Environment Variables & Secrets (CRITICAL)
+# ==========================================
+.env
+.env.*
+*.env
+**/.env
+**/.env.*
+**/*.env
+!.env.example
+!**/.env.example
+*.local
+
+# ==========================================
+# Databases & Local Storage (CRITICAL)
+# ==========================================
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+*.sql
+*.dump
+*.rdb
+*.mdb
+data/
+**/data/
+database/
+**/database/
+mongo_data/
+mongodb_data/
+
+# ==========================================
+# Python Cache & Testing
+# ==========================================
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+**/.pytest_cache/
+.coverage
+htmlcov/
+
+# ==========================================
+# OS & Editor Files
+# ==========================================
+.DS_Store
+Thumbs.db
+.vscode/
+**/.vscode/
+.idea/
+**/.idea/
+*.log
+logs/
+**/logs/

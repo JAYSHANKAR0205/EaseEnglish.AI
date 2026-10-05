@@ -1,0 +1,18 @@
+{
+  "name": "ease-english-platform",
+  "version": "1.0.0",
+  "description": "Ease English — Enterprise AI English Practice Platform",
+  "scripts": {
+    "dev:frontend": "npm --prefix frontend run dev",
+    "dev:backend": "npm --prefix backend start",
+    "dev:ai": "cd ai-service && .\\venv\\Scripts\\python.exe -m uvicorn app.main:app --host 127.0.0.1 --port 8000 --reload",
+    "build:frontend": "npm --prefix frontend run build",
+    "test:backend": "npm --prefix backend test",
+    "test:ai": "cd ai-service && .\\venv\\Scripts\\python.exe -m pytest -v",
+    "test:integration": "node backend/tests/run_full_verification.js",
+    "test:all": "npm run test:ai && npm run test:backend && npm run build:frontend && npm run test:integration"
+  },
+  "devDependencies": {
+    "playwright": "^1.63.0"
+  }
+}
