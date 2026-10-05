@@ -19,7 +19,7 @@ import { Loader } from './components/common/Loader';
 
 const GOOGLE_CLIENT_ID =
   import.meta.env.VITE_GOOGLE_CLIENT_ID ||
-  '1083809691452-uncr1hsesdq94s7sns2mds87co1amuhp.apps.googleusercontent.com';
+  'your-google-client-id.apps.googleusercontent.com';
 
 const AppContent: React.FC = () => {
   const { isAuthenticated, isLoading, loginModalOpen, setLoginModalOpen, user } = useAuth();
